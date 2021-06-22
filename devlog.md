@@ -2,8 +2,8 @@
 
 ## 1
 [] create migrations:
-   [] Home
-   [] User
+   [x] Home
+   [x] User
    [] Plant
    [] Category - later
 [] add relationships
