@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_160209) do
+ActiveRecord::Schema.define(version: 2021_06_22_175744) do
 
   create_table "homes", force: :cascade do |t|
     t.string "city"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2021_06_22_160209) do
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_plants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,5 +41,6 @@ ActiveRecord::Schema.define(version: 2021_06_22_160209) do
     t.index ["home_id"], name: "index_users_on_home_id"
   end
 
+  add_foreign_key "plants", "users"
   add_foreign_key "users", "homes"
 end

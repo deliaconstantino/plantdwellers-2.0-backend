@@ -1,6 +1,9 @@
-Module Api
-  Module V1
-    class PlantsController < ApplicationController
-    end
+class Api::V1::PlantsController < ApplicationController
+
+  def index
+    @plants = Plant.all
+
+    render json: @plants
   end
+
 end
