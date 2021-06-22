@@ -6,7 +6,8 @@ class Api::V1::HomesController < ApplicationController
   def index
     @homes = Home.all
 
-    render json: @homes
+    # render json: @homes
+    render json: HomeSerializer.new(@homes).serializable_hash.to_json
   end
 
   # GET /homes/1
