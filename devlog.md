@@ -4,7 +4,7 @@
 [] create migrations:
    [x] Home
    [x] User
-   [] Plant
+   [x] Plant
    [] Category - later
 [] add relationships
 [] add minimal seed data
