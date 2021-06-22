@@ -6,10 +6,12 @@
    [x] User
    [x] Plant
    [] Category - later
-[] add relationships
-[] add minimal seed data
-[] test
+[x] add relationships
+[x] add minimal seed data
+[x] test
 
 ## 2
+[] implement serializers to load data to front end
+[] add redux store
 [] create login/logout
 [] create sign-up
