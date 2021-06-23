@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :homes
       resources :users
       resources :plants
+      post '/login', to: 'auth#create'
     end
   end
 
