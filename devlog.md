@@ -11,7 +11,9 @@
 [x] test
 
 ## 2
-[] implement serializers to load data to front end
-[] add redux store
+[x] implement serializers to load data to front end
+[x] add redux store
 [] create login/logout
 [] create sign-up
+[] rework organization - use feature folder and slice on frontend
+[] change log in to be held in react component state, not redux store
