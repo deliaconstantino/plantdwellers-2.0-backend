@@ -9,4 +9,5 @@ class Api::V1::UsersController < ApplicationController
     render json: UserSerializer.new(@users).serializable_hash.to_json
   end
 
+
 end
