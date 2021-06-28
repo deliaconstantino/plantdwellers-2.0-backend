@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       resources :homes
       resources :users
       resources :plants
-      post '/login', to: 'auth#create'
+      post '/login', to: 'auth#login'
+      post '/logout', to: 'auth#delete'
     end
   end
 
