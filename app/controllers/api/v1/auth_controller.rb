@@ -1,3 +1,4 @@
+require 'pry'
 class Api::V1::AuthController < ApplicationController
   before_action :authorized, except: [:login]
 
