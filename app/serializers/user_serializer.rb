@@ -1,5 +1,7 @@
 class UserSerializer
   include JSONAPI::Serializer
-  attributes :name, :email
-  belongs_to :home
+  attributes :name, :email, :home, :plants
+  # belongs_to :home
+
+
 end
