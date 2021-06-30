@@ -16,4 +16,9 @@
 [] create login/logout
 [] create sign-up
 [] rework organization - use feature folder and slice on frontend
-[] change log in to be held in react component state, not redux store
+[x] change log in to be held in react component state, not redux store
+
+## 3
+[] change frontend fetch to use restful routing - only load current user on login fetch.
+[] load home info with a new fetch (to homes resource) on Profile load
+[] load plant info with a new fetch (to plants resource) on Plants load

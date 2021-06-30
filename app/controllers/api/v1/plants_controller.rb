@@ -1,6 +1,8 @@
+require 'pry'
 class Api::V1::PlantsController < ApplicationController
 
   def index
+    binding.pry
     @plants = Plant.all
 
     # render json: @plants
