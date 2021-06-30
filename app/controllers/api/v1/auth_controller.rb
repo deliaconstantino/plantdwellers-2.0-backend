@@ -12,7 +12,7 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
-  def profile
+  def profile # should be in a different controller
     if current_user()
       render json: UserSerializer.new(current_user)
     end
