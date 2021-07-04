@@ -22,3 +22,13 @@
 [] change frontend fetch to use restful routing - only load current user on login fetch.
 [] load home info with a new fetch (to homes resource) on Profile load
 [x] load plant info with a new fetch (to plants resource) on Plants load
+
+## 4 Watering rate backend
+[] events table for watering events
+ - an event belongs to a plant
+ - a plant has many watering events
+ Event Attributes:
+ - plant id
+ - date
+ - month?
+ - complete (boolean)
