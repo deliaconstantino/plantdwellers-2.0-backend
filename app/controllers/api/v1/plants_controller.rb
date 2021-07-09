@@ -10,7 +10,6 @@ class Api::V1::PlantsController < ApplicationController
   def create
     if current_user()
       plant = current_user.plants.build(plant_params)
-      # binding.pry
     end
 
     if plant.save
@@ -20,7 +19,7 @@ class Api::V1::PlantsController < ApplicationController
 
   private
   def plant_params
-    params.require(:plant).permit(:common_name, :scientific_name, :location)
+    params.require(:plant).permit(:common_name, :scientific_name, :location, :watering_rate)
   end
 
 end

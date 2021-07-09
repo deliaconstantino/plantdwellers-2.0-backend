@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_175744) do
+ActiveRecord::Schema.define(version: 2021_07_09_215734) do
 
   create_table "homes", force: :cascade do |t|
     t.string "city"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2021_06_22_175744) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "plant_events", force: :cascade do |t|
+    t.integer "plant_id", null: false
+    t.date "date"
+    t.boolean "completed", default: false, null: false
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant_id"], name: "index_plant_events_on_plant_id"
+  end
+
   create_table "plants", force: :cascade do |t|
     t.string "common_name"
     t.string "scientific_name"
@@ -28,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_175744) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.integer "watering_repeat_rate_days"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
 
@@ -41,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_175744) do
     t.index ["home_id"], name: "index_users_on_home_id"
   end
 
+  add_foreign_key "plant_events", "plants"
   add_foreign_key "plants", "users"
   add_foreign_key "users", "homes"
 end
