@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :homes
       resources :users
       resources :plants
+      resources :plant_events
       post '/login', to: 'auth#login'
       get '/profile', to: 'auth#profile'
       post '/logout', to: 'auth#delete'
