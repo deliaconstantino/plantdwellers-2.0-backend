@@ -32,3 +32,17 @@
  - date
  - month?
  - complete (boolean)
+
+ ## 5 Add rate to backend:
+ [] a plant has many dates, a date belongs to a plant
+ [] a date can be repeated
+ [] a date belongs to a user through plants
+ [] a user has many dates through plants
+ [] add watering rate repeat every _ days to plants table ?
+ [] in controller, will have a monthly recurring action to update the plant_events
+ [] based on dates, render content in calendar, on pop-up click show full details
+ [] allow user to input 1 - 28 for watering_rate
+
+ ## 6 Monthly plant_events table
+ [] table of dates for the month, updates per month
+ [] each row has a plant_id, date, completed (default false)
