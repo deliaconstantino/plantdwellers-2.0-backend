@@ -7,7 +7,7 @@ class Api::V1::HomesController < ApplicationController
     @home = current_user.home
 
     options = {
-     include: [:plant_events]
+     include: [:plant_events, :users]
    }
   #  render json: SourceSerializer.new(sources, options)
 

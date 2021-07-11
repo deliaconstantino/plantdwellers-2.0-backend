@@ -5,12 +5,4 @@ class HomeSerializer
   has_many :plant_events, through: :plants
   has_many :users
 
-  # attribute :plants do |info|
-  #   "#{info.name}"
-  # end
-
-
-
-
-
 end
