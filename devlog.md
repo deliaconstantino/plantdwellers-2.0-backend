@@ -46,3 +46,9 @@
  ## 6 Monthly plant_events table
  [] table of dates for the month, updates per month
  [] each row has a plant_id, date, completed (default false)
+
+
+## 7 Render Home with Calendar
+[] update home page on frontend to fetch all home data: home info, users of home, all plants of home, with plant_events
+[] add validations that a user can only see their home, not any home
+[] add to user sign up to route to a page to join or create a home
