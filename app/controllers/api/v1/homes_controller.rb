@@ -7,12 +7,9 @@ class Api::V1::HomesController < ApplicationController
     @home = current_user.home
 
     options = {
-     include: [:plant_events, :users]
+     include: [:users]
    }
-  #  render json: SourceSerializer.new(sources, options)
 
-    # render json: @homes
-    # options[:include] = [:plant, :'plant.plant_events']
     render json: HomeSerializer.new(@home, options).serializable_hash.to_json
   end
 
