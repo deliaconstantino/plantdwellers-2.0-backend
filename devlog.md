@@ -55,6 +55,7 @@
 [] add to user sign up to route to a page to join or create a home
 
 ## 8 Home Page/Calendar
-[] render home info from home conponent
-[] update calendar pop-up; add checkbox to mark complete
-[] implement post to backend to update completion status of watering event - possible to load all plants for a day in one form and on close of form, if any checked, send a post to backend to udpate at that point rather than on each check?
+[x] render home info from home conponent
+[s] update calendar pop-up; add checkbox to mark complete
+[x] implement post to backend to update completion status of watering event
+[] update chekcbox to render as checked when completed = true
