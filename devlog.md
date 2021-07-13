@@ -40,8 +40,8 @@
  [x] a user has many date events through plants
  [x] add watering rate repeat every _ days to plants table
  [] in controller, will have a monthly recurring action to update the plant_events
- [] based on dates, render content in calendar, on pop-up click show full details
- [] allow user to input 1 - 28 for watering_rate
+ [x] based on dates, render content in calendar, on pop-up click show full details
+ [x] allow user to input 1 - 28 for watering_rate
 
  ## 6 Monthly plant_events table
  [x] table of dates for the month, updates per month
@@ -58,4 +58,8 @@
 [x] render home info from home conponent
 [s] update calendar pop-up; add checkbox to mark complete
 [x] implement post to backend to update completion status of watering event
-[] update chekcbox to render as checked when completed = true
+[x] update chekcbox to render as checked when completed = true
+
+## 9
+[] add delete plant option for user's own plants as button from plant card
+[] update plant card to render a leaf photo
