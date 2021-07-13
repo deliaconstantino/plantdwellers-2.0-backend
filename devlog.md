@@ -61,5 +61,5 @@
 [x] update chekcbox to render as checked when completed = true
 
 ## 9
-[] add delete plant option for user's own plants as button from plant card
+[x] add delete plant option for user's own plants as button from plant card
 [] update plant card to render a leaf photo
