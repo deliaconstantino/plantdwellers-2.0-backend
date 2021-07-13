@@ -13,8 +13,7 @@ class Api::V1::PlantEventsController < ApplicationController
   end
 
   def update
-    event = PlantEvent.find_by(params[:id])
-
+    event = PlantEvent.find_by(id: params[:id])
     if event
       event.update(plant_event_params)
       render json: PlantEventSerializer.new(event).serializable_hash.to_json
@@ -30,7 +29,7 @@ class Api::V1::PlantEventsController < ApplicationController
   private
 
   def plant_event_params
-    params.require(:plant_event).permit(:completed, :date, :event_type, :plant_id)
+    params.require(:plant_event).permit(:completed, :date, :event_type, :plant_id, :id)
   end
 
 
