@@ -3,7 +3,7 @@ require 'active_support'
 
 class Plant < ApplicationRecord
   belongs_to :user
-  has_many :plant_events
+  has_many :plant_events, dependent: :destroy
 
   #TODO: make this a reusable method with a type parameter
 
