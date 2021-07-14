@@ -62,4 +62,4 @@
 
 ## 9
 [x] add delete plant option for user's own plants as button from plant card
-[] update plant card to render a leaf photo
+[x] update plant card to render a leaf photo
