@@ -3,11 +3,14 @@ class Api::V1::HomesController < ApplicationController
   before_action :set_home, only: [:show, :update, :destroy]
 
   # GET /homes
-  def index
-    @homes = Home.all
+  def index #using index
+    @home = current_user.home
 
-    # render json: @homes
-    render json: HomeSerializer.new(@homes).serializable_hash.to_json
+    options = {
+     include: [:users]
+   }
+
+    render json: HomeSerializer.new(@home, options).serializable_hash.to_json
   end
 
   # GET /homes/1

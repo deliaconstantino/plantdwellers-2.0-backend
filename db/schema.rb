@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_09_215734) do
+ActiveRecord::Schema.define(version: 2021_07_10_010434) do
 
   create_table "homes", force: :cascade do |t|
     t.string "city"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_07_09_215734) do
     t.integer "plant_id", null: false
     t.date "date"
     t.boolean "completed", default: false, null: false
-    t.string "type"
+    t.string "event_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["plant_id"], name: "index_plant_events_on_plant_id"
