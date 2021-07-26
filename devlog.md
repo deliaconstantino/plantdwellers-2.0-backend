@@ -63,3 +63,12 @@
 ## 9
 [x] add delete plant option for user's own plants as button from plant card
 [x] update plant card to render a leaf photo
+
+#10
+[] fix spacing/styling on Home page
+[] fix routes/router
+[] update logout to be just a click not a page change
+[] add option for user to create/join a home after they sign up
+
+# Extras
+[] implement responsive design
