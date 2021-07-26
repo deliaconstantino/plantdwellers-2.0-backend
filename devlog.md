@@ -68,7 +68,11 @@
 [] fix spacing/styling on Home page
 [] fix routes/router
 [] update logout to be just a click not a page change
-[] add option for user to create/join a home after they sign up
+[] add option for user to create/join a home after they sign up - put on profile page, otherwise show home name
+[] if no home, Home page should say, you haven't added a home to your profile. Click here to add and link to above page
+[] fix login to route to profile, not logout
+[] check paths and what loads with a brand new user
+
 
 # Extras
 [] implement responsive design
