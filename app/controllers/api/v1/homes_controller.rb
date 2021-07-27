@@ -1,16 +1,21 @@
 class Api::V1::HomesController < ApplicationController
   #TODO delete any unused actions
-  before_action :set_home, only: [:show, :update, :destroy]
+  # before_action :set_home, only: [:show, :update, :destroy]
 
   # GET /homes
-  def index #using index
-    @home = current_user.home
 
-    options = {
-     include: [:users]
-   }
+  def index
+    @homes = Home.all
 
-    render json: HomeSerializer.new(@home, options).serializable_hash.to_json
+    render json: HomeSerializer.new(@homes).serializable_hash.to_json
+
+  #   @home = current_user.home
+
+  #   options = {
+  #    include: [:users]
+  #  }
+
+  #   render json: HomeSerializer.new(@home, options).serializable_hash.to_json
   end
 
   # GET /homes/1
@@ -31,11 +36,10 @@ class Api::V1::HomesController < ApplicationController
 
   # PATCH/PUT /homes/1
   def update
-    if @home.update(home_params)
-      render json: @home
-    else
-      render json: @home.errors, status: :unprocessable_entity
-    end
+    home = Home.find_by(id: params[:id])
+    home.users << current_user
+
+    render json: HomeSerializer.new(home).serializable_hash.to_json
   end
 
   # DELETE /homes/1
