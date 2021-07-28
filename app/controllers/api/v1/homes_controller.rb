@@ -19,9 +19,20 @@ class Api::V1::HomesController < ApplicationController
   end
 
   # GET /homes/1
-  # def show
-  #   render json: @home
-  # end
+  def show
+    #TODO add validation check that current user a member of this home
+    home = Home.find_by(id: params[:id])
+
+    options = {
+      include: [:users]
+   }
+
+    if home
+      render json: HomeSerializer.new(home, options).serializable_hash.to_json
+    else
+      render json: {message: "home not found"}
+    end
+  end
 
   # POST /homes
   def create
