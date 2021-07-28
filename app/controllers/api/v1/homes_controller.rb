@@ -19,18 +19,19 @@ class Api::V1::HomesController < ApplicationController
   end
 
   # GET /homes/1
-  def show
-    render json: @home
-  end
+  # def show
+  #   render json: @home
+  # end
 
   # POST /homes
   def create
-    @home = Home.new(home_params)
+    home = Home.new(home_params)
 
-    if @home.save
-      render json: @home, status: :created, location: @home
+    if home.save
+      home.users << current_user
+      render json: HomeSerializer.new(home).serializable_hash.to_json
     else
-      render json: @home.errors, status: :unprocessable_entity
+      render json: home.errors.full_messages, status: :unprocessable_entity
     end
   end
 
@@ -49,9 +50,9 @@ class Api::V1::HomesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_home
-      @home = Home.find(params[:id])
-    end
+    # def set_home
+    #   @home = Home.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def home_params
