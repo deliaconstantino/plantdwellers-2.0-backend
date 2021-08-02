@@ -1,24 +1,22 @@
-# README
+# PlantDwellers 2.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+PlantDwellers 2.0 is a Single Page Application that allows housemates to share in the care of their houseplants and update a calendar with watering tasks.
 
-Things you may want to cover:
+This repo is the Rails API back end for the PlantDwellers 2.0 App.
 
-* Ruby version
+The front end of the app can be found at [plantdwellers-2.0-frontend](https://github.com/deliaconstantino/plantdwellers-2.0-frontend/blob/main/README.md) with instructions for running the front end. Note that the back end will need to be running through Rails server in order to populate information from the database while viewing the front end.
 
-* System dependencies
+Ruby version: '2.7.1'
 
-* Configuration
+Rails version: '~> 6.1.3', '>= 6.1.3.2'
 
-* Database creation
+# Configuration and Database
+To get started with PlantDwellers 2.0, fork and clone this app.
 
-* Database initialization
+Run `rails db:migrate` to run database migrations.
 
-* How to run the test suite
+Run `rails db:seed` to seed the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+Load the Rails API server on port 3001 with `rails s -p 3001` and your backend should be all set.
 
-* Deployment instructions
-
-* ...
+Make sure to keep Rails server running while the app is in use, and check out the front end repo for front end information.
