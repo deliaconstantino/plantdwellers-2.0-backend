@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_10_010434) do
+ActiveRecord::Schema.define(version: 2021_07_28_180807) do
 
   create_table "homes", force: :cascade do |t|
-    t.string "city"
-    t.string "nickname"
-    t.string "state"
-    t.string "country"
+    t.string "city", null: false
+    t.string "nickname", null: false
+    t.string "state", null: false
+    t.string "country", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

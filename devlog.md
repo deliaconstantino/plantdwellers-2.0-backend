@@ -63,3 +63,25 @@
 ## 9
 [x] add delete plant option for user's own plants as button from plant card
 [x] update plant card to render a leaf photo
+
+#10
+[] fix spacing/styling on Home page
+[x] fix routes/router
+[x] update logout to be just a click not a page change
+[x] add option for user to create/join a home after they sign up - put on profile page, otherwise show home name
+[] if no home, Home page should say, you haven't added a home to your profile. Click here to add and link to above page
+[x] implement join home form
+[x] implement create home form
+[x] fix login to route to profile, not logout
+[] check paths and what loads with a brand new user
+[] fix styling on logout button
+[] make home nickname required or maybe all fields required?
+[x] update home check in profile
+[] re-format state for home
+[] error handling, esp for createHomeForm
+[] add status codes
+[x] add email must be unique for user, all fields required to create account
+
+
+# Extras
+[] implement responsive design
