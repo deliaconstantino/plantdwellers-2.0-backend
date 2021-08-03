@@ -4,7 +4,7 @@ PlantDwellers 2.0 is a Single Page Application that allows housemates to share i
 
 This repo is the Rails API back end for the PlantDwellers 2.0 App.
 
-The front end of the app can be found at [plantdwellers-2.0-frontend](https://github.com/deliaconstantino/plantdwellers-2.0-frontend/blob/main/README.md) with instructions for running the front end. Note that the back end will need to be running through Rails server in order to populate information from the database while viewing the front end.
+The front end can be found at [plantdwellers-2.0-frontend](https://github.com/deliaconstantino/plantdwellers-2.0-frontend/blob/main/README.md) with instructions for running it. Note that the back end will need to be running through Rails server in order to populate information from the database while viewing the front end.
 
 Ruby version: '2.7.1'
 
@@ -20,3 +20,9 @@ Run `rails db:seed` to seed the database.
 Load the Rails API server on port 3001 with `rails s -p 3001` and your backend should be all set.
 
 Make sure to keep Rails server running while the app is in use, and check out the front end repo for front end information.
+
+# License
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+# Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/deliaconstantino/plantdwellers-2.0-backend.
