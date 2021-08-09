@@ -15,7 +15,7 @@ To get started with PlantDwellers 2.0, fork and clone this app.
 
 Run `bundle install`
 
-This app uses JWT (JSON WEb Token) and Figaro gems for user authentication. To install Figaro, Run `bundle exec figaro install`. This command creates a commented version of the `config/application.yml` file and adds it to your `.gitignore`. 
+This app uses JWT (JSON Web Token) and [Figaro](https://github.com/laserlemon/figaro#getting-started) for user authentication. To install Figaro, run `bundle exec figaro install`. This command creates a commented version of the `config/application.yml` file and adds it to your `.gitignore`. 
 
 Configure the `config/application.yml` file to hold your secret:
 ```
