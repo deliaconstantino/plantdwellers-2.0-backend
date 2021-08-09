@@ -1,5 +1,6 @@
 require 'pry'
 class Api::V1::AuthController < ApplicationController
+  before_action :authorized, except: [:login]
 
   def login
     user = User.find_by(email: params[:email])

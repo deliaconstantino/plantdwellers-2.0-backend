@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-  #TODO delete unused routes
-
   namespace :api do
     namespace :v1 do
-      resources :homes
-      resources :users
-      resources :plants
-      resources :plant_events
+      resources :homes, only: [:index, :show, :create]
+      resources :plants, only: [:index, :create, :destroy]
+      resources :plant_events, only: [:index, :update]
       post '/login', to: 'auth#login'
       post '/signup', to: 'users#create'
       get '/profile', to: 'users#profile'
