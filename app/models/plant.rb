@@ -4,8 +4,7 @@ require 'active_support'
 class Plant < ApplicationRecord
   belongs_to :user
   has_many :plant_events, dependent: :destroy
-
-  #TODO: make this a reusable method with a type parameter
+  validates :common_name, :scientific_name, :location, :watering_repeat_rate_days, presence: true
 
   def build_plant_events_collection(watering_repeat_rate_days, start_date = Date.today)
     event_date = start_date
