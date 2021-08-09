@@ -1,12 +1,6 @@
 class ApplicationController < ActionController::API
   before_action :authorized, except: [:login]
 
-  def profile # should be in a different controller
-    if current_user()
-      render json: UserSerializer.new(current_user)
-    end
-  end
-
   def encode_token(payload) #{ user_id: 2 }
     JWT.encode(payload, ENV["JWT_SECRET"]) #issue a token, store payload in token
   end

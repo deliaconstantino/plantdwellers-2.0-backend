@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :plant_events
       post '/login', to: 'auth#login'
       post '/signup', to: 'users#create'
-      get '/profile', to: 'auth#profile'
+      get '/profile', to: 'users#profile'
       post '/logout', to: 'auth#delete'
     end
   end

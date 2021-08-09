@@ -20,6 +20,12 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def profile
+    if current_user()
+      render json: UserSerializer.new(current_user)
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password)
