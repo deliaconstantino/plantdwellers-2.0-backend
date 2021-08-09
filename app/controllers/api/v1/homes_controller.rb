@@ -27,6 +27,13 @@ class Api::V1::HomesController < ApplicationController
     end
   end
 
+  def update
+    home = Home.find_by(id: params[:id])
+    home.users << current_user
+
+    render json: HomeSerializer.new(home).serializable_hash.to_json, status: 200
+  end
+
   private
     def home_params
       params.require(:home).permit(:city, :nickname, :state, :country)
