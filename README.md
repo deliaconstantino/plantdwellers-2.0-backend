@@ -13,6 +13,18 @@ Rails version: '~> 6.1.3', '>= 6.1.3.2'
 # Configuration and Database
 To get started with PlantDwellers 2.0, fork and clone this app.
 
+Run `bundle install`
+
+This app uses JWT (JSON Web Token) and [Figaro](https://github.com/laserlemon/figaro#getting-started) for user authentication. To install Figaro, run `bundle exec figaro install`. This command creates a commented version of the `config/application.yml` file and adds it to your `.gitignore`. 
+
+Configure the `config/application.yml` file to hold your secret:
+```
+# config/application.yml
+JWT_SECRET: "create_your_own_secret_here"
+```
+
+The secret should be a random string that is not shared with git, Github, or any third parties. A good option is to use [Ruby `SecureRandom`](https://ruby-doc.org/stdlib-2.5.1/libdoc/securerandom/rdoc/SecureRandom.html) to generate a random string. (The secret is accessed via the line `ENV["JWT_SECRET"]` when needed throughout the app.)
+
 Run `rails db:migrate` to run database migrations.
 
 Run `rails db:seed` to seed the database.
