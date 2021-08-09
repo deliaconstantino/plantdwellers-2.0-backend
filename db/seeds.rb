@@ -14,8 +14,8 @@ ActiveRecord::Base.transaction do
     clare = User.create(name: "Clare",  email: "cc@example.com", password: "password", home_id: ohio.id)
     sam = User.create(name: "Sam",  email: "sam@example.com", password: "password", home_id: ohio.id)
 
-    palm_tree = Plant.create(common_name: "palm tree", scientific_name: "Arecaceae", location: "porch", user: delia)
-    bromeliad = Plant.create(common_name: "bromeliad", scientific_name: "Bromeliad", location: "living room", user: scott)
-    orchid = Plant.create(common_name: "orchid", scientific_name: "Orchidaceae", location: "bedroom", user: clare)
-    basil = Plant.create(common_name: "basil", scientific_name: "Ocimum basilicum", location: "kitchen", user: sam)
+    palm_tree = Plant.create(common_name: "palm tree", scientific_name: "Arecaceae", location: "porch", user: delia, watering_repeat_rate_days: 4)
+    bromeliad = Plant.create(common_name: "bromeliad", scientific_name: "Bromeliad", location: "living room", user: scott, watering_repeat_rate_days: 7)
+    orchid = Plant.create(common_name: "orchid", scientific_name: "Orchidaceae", location: "bedroom", user: clare, watering_repeat_rate_days: 7)
+    basil = Plant.create(common_name: "basil", scientific_name: "Ocimum basilicum", location: "kitchen", user: sam, watering_repeat_rate_days: 3)
 end
