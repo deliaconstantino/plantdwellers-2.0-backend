@@ -21,9 +21,9 @@ class Api::V1::HomesController < ApplicationController
     home = Home.new(home_params)
     if home.save
       home.users << current_user
-      render json: HomeSerializer.new(home).serializable_hash.to_json
+      render json: HomeSerializer.new(home).serializable_hash.to_json, status: 200
     else
-      render json: home.errors.full_messages, status: :unprocessable_entity
+      render json: {errors: home.errors.full_messages}, status: 400
     end
   end
 
