@@ -1,71 +1,40 @@
 class Api::V1::HomesController < ApplicationController
-  #TODO delete any unused actions
-  # before_action :set_home, only: [:show, :update, :destroy]
-
-  # GET /homes
-
   def index
     @homes = Home.all
-
-    render json: HomeSerializer.new(@homes).serializable_hash.to_json
-
-  #   @home = current_user.home
-
-  #   options = {
-  #    include: [:users]
-  #  }
-
-  #   render json: HomeSerializer.new(@home, options).serializable_hash.to_json
+    render json: HomeSerializer.new(@homes).serializable_hash.to_json, status: 200
   end
 
-  # GET /homes/1
   def show
     #TODO add validation check that current user a member of this home
     home = Home.find_by(id: params[:id])
-
     options = {
       include: [:users]
    }
-
     if home
-      render json: HomeSerializer.new(home, options).serializable_hash.to_json
+      render json: HomeSerializer.new(home, options).serializable_hash.to_json, status: 200
     else
       render json: {message: "home not found"}
     end
   end
 
-  # POST /homes
   def create
     home = Home.new(home_params)
-
     if home.save
       home.users << current_user
-      render json: HomeSerializer.new(home).serializable_hash.to_json
+      render json: HomeSerializer.new(home).serializable_hash.to_json, status: 200
     else
-      render json: home.errors.full_messages, status: :unprocessable_entity
+      render json: {errors: home.errors.full_messages}, status: 400
     end
   end
 
-  # PATCH/PUT /homes/1
   def update
     home = Home.find_by(id: params[:id])
     home.users << current_user
 
-    render json: HomeSerializer.new(home).serializable_hash.to_json
-  end
-
-  # DELETE /homes/1
-  def destroy
-    @home.destroy
+    render json: HomeSerializer.new(home).serializable_hash.to_json, status: 200
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_home
-    #   @home = Home.find(params[:id])
-    # end
-
-    # Only allow a list of trusted parameters through.
     def home_params
       params.require(:home).permit(:city, :nickname, :state, :country)
     end
