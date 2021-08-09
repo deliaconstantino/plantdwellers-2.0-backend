@@ -17,6 +17,8 @@ class Api::V1::PlantsController < ApplicationController
       plant.build_plant_events_collection(plant.watering_repeat_rate_days, start_date = Date.today)
 
       render json: PlantSerializer.new(plant).serializable_hash.to_json, status: 200
+    else
+      render json: {errors: plant.errors.full_messages}, status: 400
     end
   end
 
