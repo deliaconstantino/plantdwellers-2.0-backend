@@ -5,7 +5,6 @@ class Api::V1::HomesController < ApplicationController
   end
 
   def show
-    #TODO add validation check that current user a member of this home
     home = Home.find_by(id: params[:id])
     options = {
       include: [:users]
