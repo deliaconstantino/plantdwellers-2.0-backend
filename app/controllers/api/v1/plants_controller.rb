@@ -34,7 +34,7 @@ class Api::V1::PlantsController < ApplicationController
 
   private
   def plant_params
-    params.require(:plant).permit(:common_name, :scientific_name, :location, :watering_repeat_rate_days)
+    params.require(:plant).permit(:common_name, :scientific_name, :location, :watering_repeat_rate_days, :image_url, :description)
   end
 
 end
