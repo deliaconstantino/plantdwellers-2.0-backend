@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_180807) do
+ActiveRecord::Schema.define(version: 2023_01_13_212640) do
 
   create_table "homes", force: :cascade do |t|
     t.string "city", null: false
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2021_07_28_180807) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
     t.integer "watering_repeat_rate_days"
+    t.string "image_url"
+    t.string "description"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
 
